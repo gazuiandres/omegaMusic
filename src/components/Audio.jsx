@@ -6,25 +6,22 @@ const Audio = ({ song }) => {
 
   const {
     state: {
-      controls: { play },
+      controls: { play, volume },
     },
+    playNextSong,
   } = useContext(Context);
 
   useEffect(() => {
-    if (!song) {
-      audio.current.volume = 0.5;
-    }
-
-    // if (audio.current) {
-    //   console.log(audio.current);
-    // }
-
     if (audio.current && song) {
       audio.current.pause();
       audio.current.load();
       audio.current.play();
     }
   }, [song]);
+
+  if (audio.current) {
+    audio.current.volume = volume;
+  }
 
   if (audio.current && song && play) {
     if (audio.current.readyState > 0) {
@@ -40,7 +37,7 @@ const Audio = ({ song }) => {
 
   return (
     <div>
-      <audio controls ref={audio}>
+      <audio controls onEnded={() => playNextSong()} ref={audio}>
         <source src={song} />
       </audio>
     </div>

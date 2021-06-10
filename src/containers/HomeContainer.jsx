@@ -15,12 +15,13 @@ const HomeContainer = () => {
 
   const { query, setQuery, filteredSongs } = useSearchSong(songs);
 
-  const playSong = ({ src, name, cover, autor }) => {
+  const playSong = ({ src, name, cover, autor, id }) => {
     loadSong({
       src,
       name,
       cover,
       autor,
+      id,
     });
   };
 

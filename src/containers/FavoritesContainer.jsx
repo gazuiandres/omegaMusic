@@ -15,12 +15,13 @@ const FavoritesContainer = () => {
 
   const { query, setQuery, filteredSongs } = useSearchSong(favorites);
 
-  const playSong = ({ src, name, cover, autor }) => {
+  const playSong = ({ src, name, cover, autor, id }) => {
     loadSong({
       src,
       name,
       cover,
       autor,
+      id,
     });
   };
 

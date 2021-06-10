@@ -5,18 +5,22 @@ import Context from "../context/Context";
 import PlayButton from "../assets/PlayButton.svg";
 import PauseButton from "../assets/pauseButton.svg";
 import NextButton from "../assets/nextButton.svg";
+import VolumeUp from "../assets/volumeUp.svg";
+import VolumeDown from "../assets/volumeDown.svg";
 
 import {
   ControlWrapper,
   Image,
   FlexWrapper,
   InfoContainer,
+  VolumenContainer,
   ControlsContainer,
   Icon,
 } from "../styles/components/PlayControls";
 
-const PlayControls = ({ cover, name, autor, play }) => {
-  const { playSong, pauseSong } = useContext(Context);
+const PlayControls = ({ cover, name, autor, play, volume }) => {
+  const { playSong, pauseSong, playNextSong, playPreviousSong, volumeControl } =
+    useContext(Context);
 
   const isDesktop = useMediaQuery({
     query: "(min-device-width: 1100px)",
@@ -39,27 +43,47 @@ const PlayControls = ({ cover, name, autor, play }) => {
           <p>{autor}</p>
         </InfoContainer>
 
-        {cover !== "" && (
-          <ControlsContainer>
-            <Icon
-              size={getSizeIcons(isDesktop, "nextButton")}
-              rotate="180"
-              src={NextButton}
-              alt="Icon"
-            />
-            <Icon
-              size={getSizeIcons(isDesktop)}
-              cover={true}
-              src={play ? PauseButton : PlayButton}
-              onClick={() => (play ? pauseSong() : playSong())}
-              alt="Icon"
-            />
-            <Icon
-              size={getSizeIcons(isDesktop, "nextButton")}
-              src={NextButton}
-              alt="Icon"
-            />
-          </ControlsContainer>
+        {cover && (
+          <>
+            {isDesktop && (
+              <VolumenContainer>
+                <img
+                  src={volume > 0.4 ? VolumeUp : VolumeDown}
+                  alt="Volume Icon"
+                />
+                <input
+                  type="range"
+                  value={volume}
+                  min="0.1"
+                  max="1"
+                  step="0.01"
+                  onChange={(e) => volumeControl(e.target.value)}
+                />
+              </VolumenContainer>
+            )}
+
+            <ControlsContainer>
+              <Icon
+                size={getSizeIcons(isDesktop, "nextButton")}
+                rotate="180"
+                src={NextButton}
+                alt="Icon"
+                onClick={() => playPreviousSong()}
+              />
+              <Icon
+                size={getSizeIcons(isDesktop)}
+                src={play ? PauseButton : PlayButton}
+                onClick={() => (play ? pauseSong() : playSong())}
+                alt="Icon"
+              />
+              <Icon
+                size={getSizeIcons(isDesktop, "nextButton")}
+                src={NextButton}
+                alt="Icon"
+                onClick={() => playNextSong()}
+              />
+            </ControlsContainer>
+          </>
         )}
       </FlexWrapper>
     </ControlWrapper>

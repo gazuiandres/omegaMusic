@@ -36,7 +36,7 @@ const SongCard = ({
         <div>
           <CardIcon
             src={PlayButton}
-            onClick={() => event({ src, name, cover, autor })}
+            onClick={() => event({ src, name, cover, autor, id })}
           />
           {isFavorite ? (
             <CardIcon

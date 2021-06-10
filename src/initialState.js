@@ -84,6 +84,7 @@ const InitialState = {
     },
   ],
   main: {
+    id: 0,
     src: "",
     name: "",
     autor: "",
@@ -92,15 +93,8 @@ const InitialState = {
   favorites: [],
   controls: {
     play: false,
+    volume: 0.5,
   },
 };
 
 export default InitialState;
-
-// {
-//   id: "",
-//   name: "",
-//   autor: "",
-//   src: "",
-//   cover: "",
-// },

@@ -53,11 +53,29 @@ export const InfoContainer = styled.div`
   @media (min-width: 1100px) {
     margin: 0 auto;
     text-align: start;
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
     p {
       font-size: 1.6rem;
       margin-bottom: 0.5rem;
     }
+  }
+`;
+
+export const VolumenContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto 4rem;
+
+  /* background-color: red; */
+
+  img {
+    width: 22px;
+    height: 22px;
+    margin-right: 2rem;
+  }
+  input {
+    width: 80%;
   }
 `;
 
