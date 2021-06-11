@@ -64,7 +64,7 @@ export const InfoContainer = styled.div`
 export const VolumenContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 70%;
   margin: 0 auto 4rem;
 
   /* background-color: red; */
@@ -76,6 +76,7 @@ export const VolumenContainer = styled.div`
   }
   input {
     width: 80%;
+    cursor: pointer;
   }
 `;
 

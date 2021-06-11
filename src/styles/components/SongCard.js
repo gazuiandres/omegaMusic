@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SongCardMain = styled.div`
   display: flex;
   align-items: center;
-  width: 28rem;
+  width: 90%;
   margin: 0 auto 2.5rem;
   /* background-color: red; */
   @media (min-width: 768px) {

@@ -91,7 +91,7 @@ const useInitialState = () => {
         },
         controls: {
           ...controls,
-          play: false,
+          play: true,
         },
       });
     }
