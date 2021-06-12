@@ -15,7 +15,7 @@ const SearchBar = ({ value, onChange }) => {
         onChange={(e) => onChange(e.target.value)}
         placeholder="Search song..."
       />
-      <SearchIcon src={IconSearch} />
+      <SearchIcon src={IconSearch} alt="Search Icon" />
     </SearchBarWrapper>
   );
 };

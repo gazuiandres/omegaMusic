@@ -37,16 +37,19 @@ const SongCard = ({
           <CardIcon
             src={PlayButton}
             onClick={() => event({ src, name, cover, autor, id })}
+            alt="Play Icon"
           />
           {isFavorite ? (
             <CardIcon
               src={heartLiked}
               onClick={() => removeFromFavorite({ id })}
+              alt="Liked Icon"
             />
           ) : (
             <CardIcon
               src={HeartButton}
               onClick={() => addToFavorites({ id })}
+              alt="Like Icon"
             />
           )}
         </div>

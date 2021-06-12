@@ -5,8 +5,8 @@ const InitialState = {
   songs: [
     {
       id: 1,
-      name: "mi gente",
-      autor: "j-balvin",
+      name: "Mi gente",
+      autor: "J-balvin",
       src: "https://mus5.djxd.tk/mp3/8c215d65-187c-44f9-8b90-e472c24cd11e.mp3",
       cover:
         "https://cdns-images.dzcdn.net/images/cover/aad5dfbfd03587d830cb7dec810d92e0/350x350.jpg",
@@ -53,7 +53,7 @@ const InitialState = {
     },
     {
       id: 7,
-      name: "dakiti",
+      name: "Dakiti",
       autor: "Bad Bunny",
       src: "https://mus7.djxd.tk/mp3/eb5ba693-2d2f-42c5-9cc8-5aa96994a867.mp3",
       cover:
@@ -84,7 +84,7 @@ const InitialState = {
     },
     {
       id: 11,
-      name: "dragon ball gt opening",
+      name: "Dragon ball gt opening",
       autor: "Adrian barba",
       src: "https://mus4.djxd.tk/mp3/a62b496e-9b93-4967-bbe0-e691ec37b1ad.mp3",
       cover:
@@ -100,7 +100,7 @@ const InitialState = {
     },
     {
       id: 13,
-      name: "one punch opening2",
+      name: "One punch opening 2",
       autor: "one punch man",
       src: OnePuchManOp2,
       cover:

@@ -67,19 +67,19 @@ const PlayControls = ({ cover, name, autor, play, volume }) => {
                 size={getSizeIcons(isDesktop, "nextButton")}
                 rotate="180"
                 src={NextButton}
-                alt="Icon"
+                alt="Icon Previous Song"
                 onClick={() => playPreviousSong()}
               />
               <Icon
                 size={getSizeIcons(isDesktop)}
                 src={play ? PauseButton : PlayButton}
                 onClick={() => (play ? pauseSong() : playSong())}
-                alt="Icon"
+                alt="Icon Play Song"
               />
               <Icon
                 size={getSizeIcons(isDesktop, "nextButton")}
                 src={NextButton}
-                alt="Icon"
+                alt="Icon Next Song"
                 onClick={() => playNextSong()}
               />
             </ControlsContainer>
