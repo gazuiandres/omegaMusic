@@ -9,7 +9,7 @@ Welcome to my litle music app project, I make this application to practice my sk
 3. npm install && npm start
 4. Enjoy the app 💙
 
-## What I use to make it?
+## What I used to make it?
 
 - I used React as core library and differents tools as React Context, hooks/custom hooks and React router for the views.
 
