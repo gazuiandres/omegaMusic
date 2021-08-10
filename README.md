@@ -2,6 +2,8 @@
 
 Welcome to my litle music app project, I make this application to practice my skills in React and get fun with the process.
 
+UPDATE [August 2021]: The links I was using to play the songs are broken, so if you want to use the app go to the initialState file in src and replace the links 😄.
+
 ## How to use
 
 1. Download the repository
