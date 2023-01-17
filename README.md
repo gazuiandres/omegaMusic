@@ -2,7 +2,7 @@
 
 Welcome to my litle music app project, I make this application to practice my skills in React and get fun with the process.
 
-UPDATE [August 2023]: App working again with internal mp3 files 🔥
+UPDATE [January 2023]: App working again with internal mp3 files 🔥
 
 ## How to use
 
